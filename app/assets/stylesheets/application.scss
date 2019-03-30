@@ -12,3 +12,42 @@
  *
  */
  @import "bootstrap";
+ .home-left {
+    background: rgba(147,206,222,1);
+    background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(172,243,211,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,1)), color-stop(100%, rgba(172,243,211,1)));
+    background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(172,243,211,1) 100%);
+    background: -o-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(172,243,211,1) 100%);
+    background: -ms-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(172,243,211,1) 100%);
+    background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(172,243,211,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#acf3d3', GradientType=1 );
+    height: 960px;
+ }
+ .home-text {
+     padding-top: 30%;
+     font-size: 44px;
+     text-align: center;
+ }
+ .text-1 {
+     font-weight: bold;
+ }
+
+ .home-right {
+     text-align: center;
+     padding-left: 20px
+ }
+
+
+.form {
+    padding-top: 30%;
+}
+.form p {
+    font-size: 44px;
+}
+.form-control {
+    max-width: 400px;
+}
+
+.login {
+    background-color: #f08080;
+}
