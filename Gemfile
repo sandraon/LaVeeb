@@ -22,6 +22,10 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 # Use Devise for authentication
 gem 'devise'
+# Use Font Awesome
+gem 'font-awesome-rails'
+# Use Bootstrap-Sass
+gem 'bootstrap-sass'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
