@@ -14,6 +14,12 @@ class GroupsTest < ApplicationSystemTestCase
     visit groups_url
     click_on "New Group"
 
+    fill_in "Age", with: @group.age
+    fill_in "Description", with: @group.description
+    fill_in "Name", with: @group.name
+    fill_in "Number", with: @group.number
+    fill_in "Phone", with: @group.phone
+    fill_in "Teacher", with: @group.teacher
     click_on "Create Group"
 
     assert_text "Group was successfully created"
@@ -24,6 +30,12 @@ class GroupsTest < ApplicationSystemTestCase
     visit groups_url
     click_on "Edit", match: :first
 
+    fill_in "Age", with: @group.age
+    fill_in "Description", with: @group.description
+    fill_in "Name", with: @group.name
+    fill_in "Number", with: @group.number
+    fill_in "Phone", with: @group.phone
+    fill_in "Teacher", with: @group.teacher
     click_on "Update Group"
 
     assert_text "Group was successfully updated"
