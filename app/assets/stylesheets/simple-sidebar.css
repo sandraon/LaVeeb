@@ -61,3 +61,29 @@ i {
   margin-right: 10px;
 }
 
+.card-block {
+  min-height: 120px;
+}
+.card-row {
+  margin-bottom: 60px;
+}
+
+.card {
+  box-shadow: 10px 5px 8px #93cede;
+  border-color: #acf3d3
+}
+
+.card a{
+  text-decoration: none;
+  color: #93cede
+}
+.card h4 {
+  padding-top: 50px;
+  text-align: center
+}
+
+.page-title p{
+  border-bottom: 1px solid #6c757d;
+  font-size: 28px;
+  font-weight: bold
+}
