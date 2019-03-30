@@ -3,19 +3,19 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Tartu Lasteaed Rukkilill</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">TÖÖLAUD</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">KUJUNDUS</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">LEHED</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">MENÜÜ</a>
-        <li class="list-group-item list-group-item-action bg-light">MOODULID</li>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Personal</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Rühmad</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Toidumenüü</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Teated</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">KASUTAJAD</a>
+        <a href="#" class="list-group-item list-group-item-action">TÖÖLAUD</a>
+        <a href="#" class="list-group-item list-group-item-action">KUJUNDUS</a>
+        <a href="#" class="list-group-item list-group-item-action">LEHED</a>
+        <a href="#" class="list-group-item list-group-item-action">MENÜÜ</a>
+        <li class="list-group-item list-group-item-action">MOODULID</li>
+        <a href="#" class="list-group-item list-group-item-action"><i class="material-icons">people</i>Personal</a>
+        <a href="#" class="list-group-item list-group-item-action"><i class="material-icons">group_work</i>Rühmad</a>
+        <a href="#" class="list-group-item list-group-item-action"><i class="material-icons">restaurant_menu</i>Toidumenüü</a>
+        <a href="#" class="list-group-item list-group-item-action"><i class="material-icons">message</i>Teated</a>
+        <a href="#" class="list-group-item list-group-item-action">KASUTAJAD</a>
         <a href="#" id="help">Abi</a>
       </div>
     </div>
@@ -24,7 +24,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom" id="navbar">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
               <a class="nav-link" href="#">Vaata lehte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Profiil</a>
+              <a class="nav-link" href="#"><i class="fas fa-user-circle"></i></a>
             </li>
             <li class="nav-item">
                 <%= link_to "Logi välja", destroy_user_session_path, method: :delete, :class => 'nav-link'%>
