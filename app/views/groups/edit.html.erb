@@ -1,6 +1,11 @@
-<h1>Editing Group</h1>
+<div class="page-title">
+  <p>RÜHMAD</p>
+</div>
+<h4>Muuda rühma infot</h4>
+
+<br>
 
 <%= render 'form', group: @group %>
 
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>
+<%= link_to 'Vaata', @group %> |
+<%= link_to 'Loobu', groups_path, :class => 'btn btn-cancel' %>
