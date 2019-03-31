@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   get 'admin/index'
   resources :groups
-  resources :pages
-  resources :news
-  resources :menus
-  resources :workers
 
   get 'home/index'
 
