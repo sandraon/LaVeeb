@@ -56,8 +56,15 @@
     background-color: #93cede
 }
 .btn-save {
-    background-color: #acf3d3
+    background-color: #acf3d3;
+    width: 120px;
+    float: right
 }
 .btn-cancel {
-    background-color: #d3d3d3
+    background-color: #d3d3d3;
+    width: 120px;
+}
+
+.image-upload btn {
+    color: #d3d3d3
 }
