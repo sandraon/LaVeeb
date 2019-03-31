@@ -35,16 +35,14 @@
   </div>
 
   <div class="col-sm-6">
-    <div class="field form-group image-upload">
-      <p>Lisa pilt</p>
+    <div class="field form-group">
       <label class="btn btn-add">
-        Lisa pilt!
-        <span style="display:none;">
-          <%= image_tag(@group.avatar_url) if @group.avatar? %>
-          <%= form.file_field :avatar %>
-          <%= form.hidden_field :avatar_cache %>
-        </span>
+        Lisa pilt
+        <span style="display:none"><%= form.file_field :avatar, id: "avatar-upload" %></span>
       </label>
+      <%= form.hidden_field :avatar_cache %>
+      <br>
+      <img id="img_prev" width=300 height=300 src="#" alt="Lisatud pilt" class="img-thumbnail hidden"/> <br/><br>
       <div class="form-check">
         <label class="form-check-label">
           <%= form.check_box :remove_avatar, :class => 'form-check-input' %>
