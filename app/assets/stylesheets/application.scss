@@ -80,10 +80,11 @@
 
 .kirjed ul li {
     float: left;
-    margin-right: 5%;
     margin-top: 2%
 }
-
+.kirjed ul li:nth-child(2), .kirjed ul li:nth-child(3), .kirjed ul li:nth-child(4) {
+    margin-left: 5%;
+}
 .kirjed ul li:nth-child(1) {
     width: 90%;
 }
