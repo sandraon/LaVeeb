@@ -68,3 +68,23 @@
 .image-upload btn {
     color: #d3d3d3
 }
+
+.kirjed ul {
+    list-style-type: none;
+    margin: 0 5;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #93cede;
+    width: 100%;
+}
+
+.kirjed ul li {
+    float: left;
+    margin-right: 5%;
+    margin-top: 2%
+}
+
+.kirjed ul li:nth-child(1) {
+    width: 90%;
+}
+

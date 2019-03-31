@@ -5,23 +5,15 @@
 <h4>Lisatud rühmad</h4>
 
 <br>
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="kirjed">
     <% @groups.each do |group| %>
-      <tr>
-        <td><%= group.name %></td>
-        
-        <td><%= link_to 'Vaata', group %></td>
-        <td><%= link_to 'Muuda', edit_group_path(group) %></td>
-        <td><%= link_to 'Kustuta', group, method: :delete, data: { confirm: 'Kas oled kindel, et soovid rühma kustutada?' } %></td>
-      </tr>
+      <ul class="list-group list-group-horizontal">
+        <li><%= group.name %></li>
+        <li><%= link_to 'Vaata', group %></li>
+        <li><%= link_to 'Muuda', edit_group_path(group) %></li>
+        <li><%= link_to 'Kustuta', group, method: :delete, data: { confirm: 'Kas oled kindel, et soovid rühma kustutada?' } %></li>
+      </ul>
+      
     <% end %>
   </tbody>
 </table>
