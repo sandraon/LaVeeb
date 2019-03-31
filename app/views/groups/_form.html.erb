@@ -1,3 +1,4 @@
+
 <%= form_with(model: group, local: true) do |form| %>
   <% if group.errors.any? %>
     <div id="error_explanation">
@@ -35,12 +36,15 @@
 
   <div class="col-sm-6">
     <div class="field form-group image-upload">
-      <p>
-        <p>Lisa pilt</p>
+      <p>Lisa pilt</p>
+      <label class="btn btn-add">
+        Lisa pilt!
+        <span style="display:none;">
           <%= image_tag(@group.avatar_url) if @group.avatar? %>
-          <%= form.file_field :avatar, title: 'Vali pilt' %>
+          <%= form.file_field :avatar %>
           <%= form.hidden_field :avatar_cache %>
-      </p>
+        </span>
+      </label>
       <div class="form-check">
         <label class="form-check-label">
           <%= form.check_box :remove_avatar, :class => 'form-check-input' %>
