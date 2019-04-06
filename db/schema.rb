@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_162024) do
+ActiveRecord::Schema.define(version: 2019_04_06_165516) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 2019_04_06_162024) do
   end
 
   create_table "menus", force: :cascade do |t|
+    t.string "toidukord1"
+    t.text "kirjeldus1"
+    t.string "toidukord2"
+    t.text "kirjeldus2"
+    t.string "toidukord3"
+    t.text "kirjeldus3"
+    t.string "toidukord4"
+    t.text "kirjeldus4"
+    t.string "toidukord5"
+    t.text "kirjeldus5"
+    t.text "lisainfo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

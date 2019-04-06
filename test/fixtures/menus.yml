@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  toidukord1: MyString
+  kirjeldus1: MyText
+  toidukord2: MyString
+  kirjeldus2: MyText
+  toidukord3: MyString
+  kirjeldus3: MyText
+  toidukord4: MyString
+  kirjeldus4: MyText
+  toidukord5: MyString
+  kirjeldus5: MyText
+  lisainfo: MyText
+
+two:
+  toidukord1: MyString
+  kirjeldus1: MyText
+  toidukord2: MyString
+  kirjeldus2: MyText
+  toidukord3: MyString
+  kirjeldus3: MyText
+  toidukord4: MyString
+  kirjeldus4: MyText
+  toidukord5: MyString
+  kirjeldus5: MyText
+  lisainfo: MyText
