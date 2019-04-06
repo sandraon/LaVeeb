@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :workers
   get 'admin/index'
   resources :groups
 

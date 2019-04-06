@@ -1,0 +1,19 @@
+<div class="page-title">
+  <p>TÖÖTAJAD</p>
+</div>
+<%= link_to 'Lisa uus töötaja', new_worker_path, :class => 'btn btn-add' %><br><br>
+<h4>Lisatud töötajad</h4>
+
+<br>
+<div class="kirjed">
+    <% @workers.each do |worker| %>
+      <ul class="list-group list-group-horizontal">
+        <li><%= worker.nimi %></li>
+        <li><%= link_to 'Vaata', worker %></li>
+        <li><%= link_to 'Muuda', edit_worker_path(worker) %></li>
+        <li><%= link_to 'Kustuta', worker, method: :delete, data: { confirm: 'Kas oled kindel, et soovid töötaja kustutada?' } %></li>
+      </ul>
+      
+    <% end %>
+</div>
+
