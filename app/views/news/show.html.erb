@@ -1,0 +1,16 @@
+<div class="page-title">
+  <p>TEATED</p>
+</div>
+<br>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @news.heading %>
+</p>
+
+<p>
+  <%= raw(@news.content)%>
+</p>
+
+<%= link_to 'Muuda', edit_news_path(@news) %> |
+<%= link_to 'Tagasi', news_index_path %>
