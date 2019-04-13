@@ -1,0 +1,18 @@
+<div class="page-title">
+  <p>LEHED</p>
+</div>
+<%= link_to 'Lisa uus leht', new_page_path, :class => 'btn btn-add' %><br><br>
+<h4>Lisatud lehed</h4>
+
+<br>
+<div class="kirjed">
+    <% @pages.each do |page| %>
+      <ul class="list-group list-group-horizontal">
+        <li><%= page.heading %></li>
+        <li><%= link_to 'Vaata', page %></li>
+        <li><%= link_to 'Muuda', edit_page_path(page) %></li>
+        <li><%= link_to 'Kustuta', page, method: :delete, data: { confirm: 'Kas oled kindel, et soovid lehe kustutada?' } %></li>
+      </ul>
+      
+    <% end %>
+</div>
