@@ -9,7 +9,7 @@ class CreateGroups < ActiveRecord::Migration[5.2]
       t.string :phone
 
       t.timestamps
-    drop_table :groups
+    
     end
   end
 end

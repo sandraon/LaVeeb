@@ -14,7 +14,7 @@ class CreateMenus < ActiveRecord::Migration[5.2]
       t.text :lisainfo
 
       t.timestamps
-    drop_table :menus
+    
     end
   end
 end

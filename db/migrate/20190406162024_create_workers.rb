@@ -9,7 +9,7 @@ class CreateWorkers < ActiveRecord::Migration[5.2]
       t.string :foto
 
       t.timestamps
-    drop_table :workers
+    
     end
   end
 end

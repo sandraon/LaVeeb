@@ -5,7 +5,7 @@ class CreateNews < ActiveRecord::Migration[5.2]
       t.text :content
 
       t.timestamps
-    drop_table :news
+    
     end
   end
 end

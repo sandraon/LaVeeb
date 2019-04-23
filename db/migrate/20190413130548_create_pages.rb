@@ -5,7 +5,7 @@ class CreatePages < ActiveRecord::Migration[5.2]
       t.text :content
 
       t.timestamps
-    drop_table :pages
+    
     end
   end
 end
