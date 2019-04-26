@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laveeb</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+    <%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.8.1/css/all.css" %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css" %>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js" %>
+  </head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-6 home-left">
+            <div class="home-text">
+                <p class="text-1">LOO</p>
+                <p>OMA ASUTUSELE<br>ISEMOODI</p>
+                <p class="text-1">VEEBILEHT</p>
+            </div>
+        </div>
+        <div class="col-sm-6 home-right">
+            <div class="form">
+                <p>Logi sisse</p>
+                <%= form_for(:user, :url => session_path(:user)) do |f| %>
+                <div class="field form-group row">
+                    <%= f.label :email, 'E-posti aadress', :class => "col-sm-2 col-form-control" %>
+                    <div class="col-sm-10 field">
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control" %>
+                    </div>
+                </div>
+        
+                <div class="field form-group row">
+                    <%= f.label :password, 'Parool', :class => "col-sm-2 col-form-control" %>
+                    <div class="col-sm-10 field">
+                        <%= f.password_field :password, autocomplete: "current-password", :class => "form-control" %>
+                    </div>
+                </div>
+        
+                <% if devise_mapping.rememberable? %>
+                    <div class="form-check row">
+                            <div class="form-check">
+                                <%= f.check_box :remember_me, :class => "form-check-input" %>
+                                <%= f.label :remember_me, 'Jäta meelde', :class => "form-check-label" %>
+                            </div>
+                    </div><br>
+                <% end %>
+        
+                <div class="actions">
+                    <%= f.submit "Logi sisse", :class => 'btn login' %>
+                </div>
+                <% end %>
+        
+                <%= render "devise/shared/links" %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

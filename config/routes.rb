@@ -9,15 +9,10 @@ Rails.application.routes.draw do
   end
   
   get 'home/index'
+  get 'login', to: 'login#login', as: 'login'
   get 'admin/index'
-  devise_scope :user do
-    root to: "devise/sessions#new"
-  end
-  
   devise_for :users
 
-  scope :admin do
-    root to: "admin#index"
-  end
+  root to: 'web#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
