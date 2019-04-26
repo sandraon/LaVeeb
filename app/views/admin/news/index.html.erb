@@ -1,0 +1,18 @@
+<div class="page-title">
+  <p>TEATED</p>
+</div>
+<%= link_to 'Lisa uus teade', new_admin_news_path, :class => 'btn btn-add' %><br><br>
+<h4>Lisatud teated</h4>
+
+<br>
+<div class="kirjed">
+    <% @news.each do |news| %>
+      <ul class="list-group list-group-horizontal">
+        <li><%= news.heading %></li>
+        <li><%= link_to 'Vaata', admin_news_path(news) %></li>
+        <li><%= link_to 'Muuda', edit_admin_news_path(news) %></li>
+        <li><%= link_to 'Kustuta', admin_news_path(news), method: :delete, data: { confirm: 'Kas oled kindel, et soovid teate kustutada?' } %></li>
+      </ul>
+      
+    <% end %>
+</div>

@@ -1,0 +1,65 @@
+<%= form_with(model: [:admin, @worker], local: true) do |form| %>
+  <% if worker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(worker.errors.count, "error") %> prohibited this worker from being saved:</h2>
+
+      <ul>
+      <% worker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field form-group">
+        <%= form.label :nimi, 'Nimi' %>
+        <%= form.text_field :nimi, :class => 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :ametikoht, 'Ametikoht' %>
+        <%= form.text_field :ametikoht, :class => 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :epost, 'E-posti aadress' %>
+        <%= form.text_field :epost, :class => 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :number, 'Telefoninumber' %>
+        <%= form.text_field :number, :class => 'form-control' %>
+      </div>
+    
+      <div class="field">
+        <%= form.label :lisainfo, 'Lisainfo (nt vastuvõtuaeg vms)' %>
+        <%= form.text_area :lisainfo, :class => 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="field form-group">
+          <label class="btn btn-add">
+            Lisa foto
+            <span style="display:none"><%= form.file_field :foto, id: "foto-upload" %></span>
+          </label>
+            <%= form.hidden_field :foto_cache %>
+          <br>
+          <img id="img_prev" width=300 height=300 src="#" alt="Lisatud pilt" class="img-thumbnail hidden"/> <br/><br>
+          <div class="form-check">
+            <label class="form-check-label">
+              <%= form.check_box :remove_foto, :class => 'form-check-input' %>
+              Eemalda pilt
+            </label>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit 'Salvesta', :class => 'btn btn-save' %>
+  </div>
+<% end %>

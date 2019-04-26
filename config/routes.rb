@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
-  resources :pages
-  resources :news
-  resources :menus
-  resources :workers
-  get 'admin/index'
-  resources :groups
 
+  namespace :admin do
+    resources :pages
+    resources :news
+    resources :menus
+    resources :workers
+    resources :groups
+  end
+  
   get 'home/index'
-
+  get 'admin/index'
   devise_scope :user do
     root to: "devise/sessions#new"
   end
