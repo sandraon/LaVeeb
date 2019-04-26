@@ -1,0 +1,116 @@
+@import "bootstrap";
+/*** GENERAL ***/
+body {
+    font-family: 'Comic Sans MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Comic Sans MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+/*** HEADER ***/
+header.masthead {
+  position: relative;
+  background-color: #5EB1BF;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #5EB1BF;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.overlay {
+  position: absolute;
+  background-color: #5EB1BF;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+.navbar-brand {
+  color: #042A2B !important;
+}
+
+.nav-link {
+  color: #042A2B !important;
+}
+.nav-item:hover {
+  background-color: #F4E04D;
+}
+
+.masthead-btn {
+  background-color: #F4E04D;
+  color: #042A2B;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/*** CONTENT PART ***/
+.content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+
+/*** FOOTER ***/
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  background-color: #5EB1BF !important;
+  color: #042A2B;
+  font-weight: bold;
+}
+
+.gallery {
+  margin: 10px;
+  float: left;
+  width: 120px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+#links li a {
+  text-decoration: none;
+  color: #042A2B;
+}
+
+#links li a:hover {
+  background-color: #F4E04D;
+}
+#links, #contact {
+  list-style: none;
+  margin:0;
+  padding:0
+}
