@@ -22,7 +22,7 @@
     <div class="border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Tartu Lasteaed Rukkilill</div>
       <div class="list-group list-group-flush">
-        <a href="/" class="list-group-item list-group-item-action">TÖÖLAUD</a>
+        <a href="/admin/index" class="list-group-item list-group-item-action">TÖÖLAUD</a>
         <a href="#" class="list-group-item list-group-item-action">AVALEHT</a>
         <a href="/admin/pages" class="list-group-item list-group-item-action">LEHED</a>
         <a href="#" class="list-group-item list-group-item-action">NAVIGEERIMINE</a>
@@ -31,7 +31,6 @@
         <a href="/admin/groups" class="list-group-item list-group-item-action"><i class="material-icons">group_work</i>Rühmad</a>
         <a href="/admin/menus" class="list-group-item list-group-item-action"><i class="material-icons">restaurant_menu</i>Toidumenüü</a>
         <a href="/admin/news" class="list-group-item list-group-item-action"><i class="material-icons">message</i>Teated</a>
-        <a href="#" class="list-group-item list-group-item-action">KASUTAJAD</a>
         <a href="#" id="help">Abi</a>
       </div>
     </div>
@@ -49,10 +48,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Vaata lehte</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-user-circle"></i></a>
+              <a class="nav-link" href="/" target="_blank">Vaata lehte</a>
             </li>
             <li class="nav-item">
                 <%= link_to "Logi välja", destroy_user_session_path, method: :delete, :class => 'nav-link'%>

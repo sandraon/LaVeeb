@@ -1,47 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Menus</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Toidukord1</th>
-      <th>Kirjeldus1</th>
-      <th>Toidukord2</th>
-      <th>Kirjeldus2</th>
-      <th>Toidukord3</th>
-      <th>Kirjeldus3</th>
-      <th>Toidukord4</th>
-      <th>Kirjeldus4</th>
-      <th>Toidukord5</th>
-      <th>Kirjeldus5</th>
-      <th>Lisainfo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @menus.each do |menu| %>
-      <tr>
-        <td><%= menu.toidukord1 %></td>
-        <td><%= menu.kirjeldus1 %></td>
-        <td><%= menu.toidukord2 %></td>
-        <td><%= menu.kirjeldus2 %></td>
-        <td><%= menu.toidukord3 %></td>
-        <td><%= menu.kirjeldus3 %></td>
-        <td><%= menu.toidukord4 %></td>
-        <td><%= menu.kirjeldus4 %></td>
-        <td><%= menu.toidukord5 %></td>
-        <td><%= menu.kirjeldus5 %></td>
-        <td><%= menu.lisainfo %></td>
-        <td><%= link_to 'Show', admin_menu_path(menu) %></td>
-        <td><%= link_to 'Edit', edit_admin_menu_path(menu) %></td>
-        <td><%= link_to 'Destroy', admin_menu_path(menu), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="page-title">
+  <p>TOIDUMENÜÜ</p>
+</div>
+<%= link_to 'Lisa uus päevamenüü', new_admin_menu_path, :class => 'btn btn-add' %><br><br>
+<h4>Nädalapäevad</h4>
 
 <br>
-
-<%= link_to 'New Menu', new_admin_menu_path %>
+<div class="kirjed">
+    <% @menus.each do |menu| %>
+      <ul class="list-group list-group-horizontal">
+        <li><%= menu.weekday %></li>
+        <li><%= link_to 'Vaata', admin_menu_path(menu) %></li>
+        <li><%= link_to 'Muuda', edit_admin_menu_path(menu) %></li>
+        <li><%= link_to 'Kustuta', admin_menu_path(menu), method: :delete, data: { confirm: 'Kas oled kindel, et soovid päevamenüü kustutada?' } %></li>
+      </ul>
+      
+    <% end %>
+</div>
