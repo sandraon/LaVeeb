@@ -1,9 +1,11 @@
 <div class="page-title">
   <p>TÖÖTAJAD</p>
 </div>
-<br>
-
 <p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag(@worker.foto_url(:thumb)) if @worker.foto? %>
+</p>
 
 <p>
   <strong>Nimi:</strong>
@@ -16,22 +18,18 @@
 </p>
 
 <p>
-  <strong>Epost:</strong>
+  <strong>E-posti aadress:</strong>
   <%= @worker.epost %>
 </p>
 
 <p>
-  <strong>Number:</strong>
+  <strong>Telefoninumber:</strong>
   <%= @worker.number %>
 </p>
 
 <p>
   <strong>Lisainfo:</strong>
   <%= @worker.lisainfo %>
-</p>
-
-<p>
-  <%= image_tag(@worker.foto_url) if @worker.foto? %>
 </p>
 
 <%= link_to 'Muuda', edit_admin_worker_path(@worker) %> |
