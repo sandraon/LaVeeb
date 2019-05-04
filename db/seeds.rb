@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Homepage.create(orgname: 'Tartu Lasteaed Rukkilill')
+
+menus = Menu.create([{ weekday: 'Esmaspäev'}, { weekday: 'Teisipäev'}, { weekday: 'Kolmapäev'}, { weekday: 'Neljapäev'}, { weekday: 'Reede'},])

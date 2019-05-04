@@ -1,59 +1,68 @@
+<div class="page-title">
+  <p>TOIDUMENÜÜ</p>
+</div>
 <p id="notice"><%= notice %></p>
+<h4><%= @menu.weekday %></h4>
 
-<p>
-  <strong>Toidukord1:</strong>
-  <%= @menu.toidukord1 %>
-</p>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <%= @menu.toidukord1 %>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= @menu.kirjeldus1 %></li>
+      </ul>
+    </div>
 
-<p>
-  <strong>Kirjeldus1:</strong>
-  <%= @menu.kirjeldus1 %>
-</p>
+    <div class="card">
+      <div class="card-header">
+        <%= @menu.toidukord2 %>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= @menu.kirjeldus2 %></li>
+      </ul>
+    </div>
 
-<p>
-  <strong>Toidukord2:</strong>
-  <%= @menu.toidukord2 %>
-</p>
+    <div class="card">
+      <div class="card-header">
+        <%= @menu.toidukord3 %>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= @menu.kirjeldus3 %></li>
+      </ul>
+    </div>
+  </div>
 
-<p>
-  <strong>Kirjeldus2:</strong>
-  <%= @menu.kirjeldus2 %>
-</p>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <%= @menu.toidukord4 %>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= @menu.kirjeldus4 %></li>
+      </ul>
+    </div>
 
-<p>
-  <strong>Toidukord3:</strong>
-  <%= @menu.toidukord3 %>
-</p>
+    <div class="card">
+      <div class="card-header">
+        <%= @menu.toidukord5 %>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= @menu.kirjeldus5 %></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Kirjeldus3:</strong>
-  <%= @menu.kirjeldus3 %>
-</p>
-
-<p>
-  <strong>Toidukord4:</strong>
-  <%= @menu.toidukord4 %>
-</p>
-
-<p>
-  <strong>Kirjeldus4:</strong>
-  <%= @menu.kirjeldus4 %>
-</p>
-
-<p>
-  <strong>Toidukord5:</strong>
-  <%= @menu.toidukord5 %>
-</p>
-
-<p>
-  <strong>Kirjeldus5:</strong>
-  <%= @menu.kirjeldus5 %>
-</p>
-
-<p>
-  <strong>Lisainfo:</strong>
-  <%= @menu.lisainfo %>
-</p>
+<div class="card">
+  <div class="card-header">
+    Lisainfo
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= @menu.lisainfo %></li>
+  </ul>
+</div>
 
 <%= link_to 'Muuda', edit_admin_menu_path(@menu) %> |
 <%= link_to 'Loobu', admin_menus_path %>

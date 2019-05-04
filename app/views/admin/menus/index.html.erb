@@ -1,8 +1,8 @@
 <div class="page-title">
   <p>TOIDUMENÜÜ</p>
 </div>
-<%= link_to 'Lisa uus päevamenüü', new_admin_menu_path, :class => 'btn btn-add' %><br><br>
-<h4>Nädalapäevad</h4>
+
+<h4>Päevamenüüd</h4>
 
 <br>
 <div class="kirjed">
@@ -11,7 +11,6 @@
         <li><%= menu.weekday %></li>
         <li><%= link_to 'Vaata', admin_menu_path(menu) %></li>
         <li><%= link_to 'Muuda', edit_admin_menu_path(menu) %></li>
-        <li><%= link_to 'Kustuta', admin_menu_path(menu), method: :delete, data: { confirm: 'Kas oled kindel, et soovid päevamenüü kustutada?' } %></li>
       </ul>
       
     <% end %>
