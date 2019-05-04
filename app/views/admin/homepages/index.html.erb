@@ -1,8 +1,13 @@
 <div class="page-title">
   <p>AVALEHT</p>
+
+
+
+<% @homepages.each do |homepage| %>
+    <%= link_to 'Muuda avalehte', edit_admin_homepage_path(homepage), :class => 'btn btn-add' %><br>
+<% end %>
+<br>
+<iframe src="/">
+<iframe>
+
 </div>
-
-
-    <% @homepages.each do |homepage| %>
-        <%= link_to 'Muuda avalehte', edit_admin_homepage_path(homepage), :class => 'btn btn-add' %><br>
-    <% end %>
