@@ -24,8 +24,6 @@ gem 'jquery-rails'
 gem 'devise'
 # Use Font Awesome
 gem 'font-awesome-rails'
-# Use Bootstrap-Sass
-gem 'bootstrap-sass'
 
 # Use SummerNote WYSIWYG Editor
 gem 'summernote-rails'
