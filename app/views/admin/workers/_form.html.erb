@@ -47,7 +47,7 @@
           </label>
             <%= form.hidden_field :foto_cache %>
           <br>
-          <img id="img_prev" width=300 height=300 src="#" alt="Lisatud pilt" class="img-thumbnail hidden"/> <br/><br>
+          <%= image_tag(@worker.foto_url(:preview)) if @worker.foto? %>
           <div class="form-check">
             <label class="form-check-label">
               <%= form.check_box :remove_foto, :class => 'form-check-input' %>

@@ -70,6 +70,6 @@ class Admin::GroupsController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:name, :number, :age, :description, :teacher, :phone, :avatar)
+      params.require(:group).permit(:name, :number, :age, :description, :teacher, :phone, :avatar, :remove_avatar)
     end
 end

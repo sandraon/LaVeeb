@@ -42,7 +42,7 @@
       </label>
       <%= form.hidden_field :avatar_cache %>
       <br>
-      <img id="img_prev" width=300 height=300 src="#" alt="Lisatud pilt" class="img-thumbnail hidden"/> <br/><br>
+      <%= image_tag(@group.avatar_url(:preview)) if @group.avatar? %>
       <div class="form-check">
         <label class="form-check-label">
           <%= form.check_box :remove_avatar, :class => 'form-check-input' %>
