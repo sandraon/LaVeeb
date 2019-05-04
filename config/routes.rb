@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :menus
     resources :workers
     resources :groups
+    resources :homepages
   end
   
   get 'home/index'

@@ -1,0 +1,8 @@
+<div class="page-title">
+  <p>AVALEHT</p>
+</div>
+
+
+    <% @homepages.each do |homepage| %>
+        <%= link_to 'Muuda avalehte', edit_admin_homepage_path(homepage), :class => 'btn btn-add' %><br>
+    <% end %>

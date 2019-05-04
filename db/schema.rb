@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_02_172248) do
+ActiveRecord::Schema.define(version: 2019_05_04_152223) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,26 @@ ActiveRecord::Schema.define(version: 2019_05_02_172248) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar"
+  end
+
+  create_table "homepages", force: :cascade do |t|
+    t.string "orgname"
+    t.string "logo"
+    t.text "content"
+    t.string "picture"
+    t.string "pictext"
+    t.string "linktekst"
+    t.string "linkdest"
+    t.string "address1"
+    t.string "address2"
+    t.string "epost"
+    t.string "phone"
+    t.string "uselink1"
+    t.string "uselink2"
+    t.string "uselink3"
+    t.string "uselink4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "menus", force: :cascade do |t|

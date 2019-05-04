@@ -1,0 +1,142 @@
+<%= form_with(model: [:admin, @homepage], local: true) do |form| %>
+  <% if homepage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(homepage.errors.count, "error") %> prohibited this homepage from being saved:</h2>
+
+      <ul>
+      <% homepage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-sm-6">
+      <h5>Asutuse info</h5>
+      <div class="field form-group">
+        <%= form.label :orgname, 'Asutuse nimi' %>
+        <%= form.text_field :orgname, :class => 'form-control' %>
+      </div>
+
+      <div class="field form-group">
+        <p>Asutuse logo</p>
+          <label class="btn btn-add">
+            Lisa logo
+            <span style="display:none"><%= form.file_field :logo, id: "logo-upload" %></span>
+          </label>
+          <%= form.hidden_field :logo_cache %>
+          <br>
+          <%= image_tag(@homepage.logo_url(:thumb)) if @homepage.logo? %>
+          <div class="form-check">
+            <label class="form-check-label">
+              <%= form.check_box :remove_logo, :class => 'form-check-input' %>
+              Eemalda logo
+            </label>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <h5>Bänner</h5>
+      <div class="field form-group">
+        <p>Foto</p>
+            <label class="btn btn-add">
+              Lisa foto
+              <span style="display:none"><%= form.file_field :picture, id: "picture-upload" %></span>
+            </label>
+            <%= form.hidden_field :picture_cache %>
+            <br>
+            <%= image_tag(@homepage.picture_url(:preview)) if @homepage.picture? %>
+        <div class="form-check">
+          <label class="form-check-label">
+            <%= form.check_box :remove_picture, :class => 'form-check-input' %>
+            Eemalda foto
+          </label>
+        </div>
+        
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :pictext, 'Tekst fotole' %>
+        <%= form.text_field :pictext, :class => 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :linktekst, 'Nupu tekst' %>
+        <%= form.text_field :linktekst, :class => 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :linkdest, 'Nupu sihtkoht' %>
+        <%= form.text_field :linkdest, :class => 'form-control' %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+        <div class="field form-group">
+          <%= form.label :content, 'Sisuosa avalehele', :class => 'h5' %>
+          <%= form.text_area :content, :class => 'form-control', :id => 'summernote-homepage' %>
+          <script>
+            $('#summernote-homepage').summernote({
+              placeholder: 'Lisada võib teksti, pilti, videot, linke ja muud',
+              height: 300
+            });
+          </script>
+        </div>
+    </div>
+  </div>
+  <h5>Kontaktandmed</h5>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field form-group">
+        <%= form.label :address1, 'Aadress' %>
+        <%= form.text_field :address1, :class => 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :address2, 'Postiindeks ja linn' %>
+        <%= form.text_field :address2, :class => 'form-control' %>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="field form-group">
+        <%= form.label :epost, 'E-posti aadress' %>
+        <%= form.text_field :epost, :class => 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :phone, 'Telefoninumber' %>
+        <%= form.text_field :phone, :class => 'form-control' %>
+      </div>
+    </div>
+  </div><br>
+  <h5>Kasulikud lingid</h5>
+  <div class="row">
+    <div class="col-sm-6">
+        <div class="field form-group">
+          <%= form.label :uselink1, 'Link' %>
+          <%= form.text_field :uselink1, :class => 'form-control' %>
+        </div>
+      
+        <div class="field form-group">
+          <%= form.label :uselink2, 'Link' %>
+          <%= form.text_field :uselink2, :class => 'form-control' %>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="field form-group">
+          <%= form.label :uselink3, 'Link' %>
+          <%= form.text_field :uselink3, :class => 'form-control' %>
+        </div>
+      
+        <div class="field form-group">
+          <%= form.label :uselink4, 'Link' %>
+          <%= form.text_field :uselink4, :class => 'form-control' %>
+        </div>
+    </div>
+  </div>
+  <br>
+  <div class="actions">
+    <%= form.submit 'Salvesta', :class => 'btn btn-save' %>
+  </div>
+<% end %>
