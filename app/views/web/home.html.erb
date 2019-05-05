@@ -1,1 +1,83 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget dolor morbi non arcu risus. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Tempor id eu nisl nunc mi ipsum faucibus. Leo in vitae turpis massa sed elementum tempus egestas. Sit amet cursus sit amet dictum sit. Sed pulvinar proin gravida hendrerit lectus a. Tristique et egestas quis ipsum suspendisse ultrices. Diam sit amet nisl suscipit adipiscing. Mi proin sed libero enim. Mauris nunc congue nisi vitae suscipit tellus mauris a. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Est sit amet facilisis magna etiam tempor orci. Cras sed felis eget velit aliquet sagittis id consectetur. Enim neque volutpat ac tincidunt vitae semper. Nisl pretium fusce id velit ut tortor pretium viverra. Sollicitudin ac orci phasellus egestas tellus.
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tartu Lasteaed Rukkilill</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'web', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+  <% @homepages.each do |homepage| %>
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="/"><%= image_tag(homepage.logo_url, size: "50x50", alt: "Asutuse logo", class: "d-inline-block") if homepage.logo? %><%= homepage.orgname %></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav navbar-right ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Avaleht</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lasteaiast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lapsevanemale</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"><%= image_tag(homepage.picture_url, alt: "Pilt avalehele", id: "overlay-img") if homepage.picture? %></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5 pictext"><%= homepage.pictext %></h1>
+        </div>
+      </div>
+      <%= link_to homepage.linktekst, homepage.linkdest, :class => "btn masthead-btn" %>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  <section class="page-content">
+    <div class="container content">
+        <%= raw(homepage.content) %>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+        <p>Kontakt</p>
+          <ul id="contact">
+            <li><%= homepage.address1 %></li>
+            <li><%= homepage.address2 %></li>
+            <li><a href="mailto:<%= homepage.epost %>"><%= homepage.epost %></a></li>
+            <li><a href="tel:<%= homepage.phone %>"><%= homepage.phone %></a></li>
+          </ul>
+        </div>
+      </div><br>
+      <p class="text-muted small">&copy; Tartu Lasteaed Rukkilill 2019</p>
+    </div>
+  </footer>
+  <% end %>
+</body>
+</html>
+    

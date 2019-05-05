@@ -37,6 +37,10 @@ header.masthead h1 {
   font-size: 2rem;
 }
 
+header.masthead a {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 12rem;
@@ -47,16 +51,28 @@ header.masthead h1 {
   }
 }
 
-.overlay {
-  position: absolute;
-  background-color: #5EB1BF;
-  height: 100%;
+#overlay-img {
   width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.3;
+  height: 100%;
+  object-fit: cover;
 }
-.navbar-brand {
+
+.pictext {
+  color: #F4E04D;
+}
+
+.masthead-btn {
+  background-color: #F4E04D;
+  color: #042A2B;
+  font-weight: bold;
+  font-size: 22px;
+  z-index: 1;
+}
+
+.navbar {
+  background-color: white;
+}
+.navbar a {
   color: #042A2B !important;
 }
 
@@ -67,12 +83,6 @@ header.masthead h1 {
   background-color: #F4E04D;
 }
 
-.masthead-btn {
-  background-color: #F4E04D;
-  color: #042A2B;
-  font-weight: bold;
-  font-size: 22px;
-}
 
 /*** CONTENT PART ***/
 .content {
@@ -90,27 +100,22 @@ footer.footer {
   font-weight: bold;
 }
 
-.gallery {
-  margin: 10px;
-  float: left;
-  width: 120px;
+footer p {
+  text-align: center;
 }
 
-.gallery img {
-  width: 100%;
-  height: auto;
+#contact {
+  list-style: none;
+  margin:0;
+  padding:0;
+  text-align: center;
 }
 
-#links li a {
-  text-decoration: none;
+#contact li a {
   color: #042A2B;
 }
 
-#links li a:hover {
-  background-color: #F4E04D;
-}
-#links, #contact {
-  list-style: none;
-  margin:0;
-  padding:0
+#contact li a:hover {
+  text-decoration: none;
+  color: #F4E04D;
 }
