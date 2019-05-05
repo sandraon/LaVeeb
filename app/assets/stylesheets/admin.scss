@@ -14,6 +14,7 @@
  @import "bootstrap";
  @import "summernote";
  
+ /*** LOGIN PAGE ***/
  .home-left {
     background: rgba(147,206,222,1);
     background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(172,243,211,1) 100%);
@@ -39,20 +40,21 @@
      padding-left: 20px
  }
 
+#laveeb-logo {
+  padding-top: 5%
+}
 
 .form {
-    padding-top: 30%;
+    padding-top: 5%;
 }
 .form p {
     font-size: 44px;
 }
 .form-control {
-    max-width: 400px;
+    width: 340px;
 }
 
-.login {
-    background-color: #f08080;
-}
+/*** BUTTONS ***/
 
 .btn-add {
     background-color: #93cede;
@@ -72,6 +74,7 @@
     color: #d3d3d3
 }
 
+/*** VIEWS ***/
 .kirjed ul {
     list-style-type: none;
     margin: 0 5;
@@ -92,9 +95,19 @@
     width: 90%;
 }
 
+.page-title p{
+  border-bottom: 1px solid #3d3d3d;
+  font-size: 28px;
+  
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+}
+/*** SIDEBAR ***/
 #sidebar-wrapper {
     min-height: 100vh;
-   
     -webkit-transition: margin .25s ease-out;
     -moz-transition: margin .25s ease-out;
     -o-transition: margin .25s ease-out;
@@ -117,6 +130,10 @@
   #sidebar-wrapper .list-group {
     width: 15rem;
   }
+
+  .modules {
+    color: #93cede;
+  }
   
   #page-content-wrapper {
     min-width: 100vw;
@@ -135,7 +152,6 @@
       min-width: 0;
       width: 100%;
     }
-  
   }
   
   #navbar {
@@ -146,6 +162,7 @@
     margin-right: 10px;
   }
   
+  /*** DASHBOARD ***/
   .card-block {
     min-height: 120px;
   }
@@ -154,10 +171,13 @@
   }
   
   .card {
-    box-shadow: 10px 5px 8px #93cede;
     border-color: #acf3d3;
     margin-bottom: 20px;
     margin-top: 20px;
+  }
+
+  .card:hover {
+    box-shadow: 10px 5px 8px #93cede;
   }
   
   .card a{
@@ -168,14 +188,7 @@
     padding-top: 50px;
     text-align: center
   }
-  
-  .page-title p{
-    border-bottom: 1px solid #3d3d3d;
-    font-size: 28px;
-    
-  }
 
-  iframe {
-    width: 100%;
-    height: 600px;
+  .admin-logo {
+    height: 172px;
   }
