@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Homepage.create(orgname: 'Tartu Lasteaed Rukkilill')
+Homepage.create(orgname: 'Asutuse nimi')
 
 menus = Menu.create([{ weekday: 'Esmaspäev'}, { weekday: 'Teisipäev'}, { weekday: 'Kolmapäev'}, { weekday: 'Neljapäev'}, { weekday: 'Reede'},])
