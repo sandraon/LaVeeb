@@ -25,4 +25,9 @@ class WebController < ApplicationController
     @news = News.all
     @news = News.order(created_at: :desc).limit(5)
   end
+
+  def subpage
+    @homepages = Homepage.all
+    @pages = Page.all
+  end
 end

@@ -1,0 +1,9 @@
+<% @pages.each do |page| %>
+<div class="row">
+    <div class="col-sm-12 subpage">
+        <h4><%= page.heading %></h4>
+        <p id="created_at">Viimati muudetud <%= page.updated_at.strftime("%d.%m.%Y") %></p>
+        <p><%= raw(page.content)%></p>
+    </div>
+</div>
+<% end %>

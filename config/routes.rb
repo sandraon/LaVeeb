@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'rühmad', to: 'web#group'
   get 'nädalamenüü', to: 'web#foodmenu'
   get 'teated', to: 'web#news'
+  get 'alamleht', to: 'web#subpage'
   
   devise_for :users
 
