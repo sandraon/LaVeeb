@@ -47,7 +47,7 @@
           </label>
             <%= form.hidden_field :foto_cache %>
           <br>
-          <%= image_tag(@worker.foto_url(:preview)) if @worker.foto? %>
+          <%= image_tag(@worker.foto_url(:thumb)) if @worker.foto? %>
           <div class="form-check">
             <label class="form-check-label">
               <%= form.check_box :remove_foto, :class => 'form-check-input' %>

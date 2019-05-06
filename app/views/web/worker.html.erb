@@ -1,0 +1,16 @@
+    <h4>Töötajad</h4>
+    <div class="row">
+        <% @workers.each do |worker| %>
+        <div class="media col-sm-4">
+            <%= image_tag(worker.foto_url(:thumb), :class => 'mr-3', alt: 'Foto') if worker.foto? %>
+            <div class="media-body">
+                <h5 class="mt-0"><%= worker.name %></h5>
+                <p><%= worker.jobtitle %></p>
+                <p><a href="mailto:<%= worker.epost %>"><%= worker.epost %></a></p>
+                <p><%= worker.number %></p>
+                <p><%= worker.info %></p>
+            </div>
+        </div>
+    <% end %>
+    </div>
+
