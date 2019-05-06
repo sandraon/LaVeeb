@@ -10,4 +10,8 @@ class WebController < ApplicationController
     @homepages = Homepage.all
     @workers = Worker.all
   end
+  def group
+    @homepages = Homepage.all
+    @groups = Group.all
+  end
 end
