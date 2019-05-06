@@ -35,10 +35,7 @@ header.masthead .overlay {
 
 header.masthead h1 {
   font-size: 2rem;
-}
-
-header.masthead a {
-  cursor: pointer;
+  color: #F4E04D;
 }
 
 @media (min-width: 768px) {
@@ -55,18 +52,6 @@ header.masthead a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.pictext {
-  color: #F4E04D;
-}
-
-.masthead-btn {
-  background-color: #F4E04D;
-  color: #042A2B;
-  font-weight: bold;
-  font-size: 22px;
-  z-index: 1;
 }
 
 .navbar {
