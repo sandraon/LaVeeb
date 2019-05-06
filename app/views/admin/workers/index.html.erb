@@ -8,7 +8,7 @@
 <div class="kirjed">
     <% @workers.each do |worker| %>
       <ul class="list-group list-group-horizontal">
-        <li><%= worker.nimi %></li>
+        <li><%= worker.name %></li>
         <li><%= link_to 'Vaata', admin_worker_path(worker) %></li>
         <li><%= link_to 'Muuda', edit_admin_worker_path(worker) %></li>
         <li><%= link_to 'Kustuta', admin_worker_path(worker), method: :delete, data: { confirm: 'Kas oled kindel, et soovid töötaja kustutada?' } %></li>

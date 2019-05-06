@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_04_152223) do
+ActiveRecord::Schema.define(version: 2019_05_06_060441) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
@@ -45,17 +45,17 @@ ActiveRecord::Schema.define(version: 2019_05_04_152223) do
   end
 
   create_table "menus", force: :cascade do |t|
-    t.string "toidukord1"
-    t.text "kirjeldus1"
-    t.string "toidukord2"
-    t.text "kirjeldus2"
-    t.string "toidukord3"
-    t.text "kirjeldus3"
-    t.string "toidukord4"
-    t.text "kirjeldus4"
-    t.string "toidukord5"
-    t.text "kirjeldus5"
-    t.text "lisainfo"
+    t.string "meal1"
+    t.text "description1"
+    t.string "meal2"
+    t.text "description2"
+    t.string "meal3"
+    t.text "description3"
+    t.string "meal4"
+    t.text "description4"
+    t.string "meal5"
+    t.text "description5"
+    t.text "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "weekday"
@@ -88,11 +88,11 @@ ActiveRecord::Schema.define(version: 2019_05_04_152223) do
   end
 
   create_table "workers", force: :cascade do |t|
-    t.string "nimi"
-    t.string "ametikoht"
+    t.string "name"
+    t.string "jobtitle"
     t.string "epost"
     t.string "number"
-    t.text "lisainfo"
+    t.text "info"
     t.string "foto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -9,12 +9,12 @@
 
 <p>
   <strong>Nimi:</strong>
-  <%= @worker.nimi %>
+  <%= @worker.name %>
 </p>
 
 <p>
   <strong>Ametikoht:</strong>
-  <%= @worker.ametikoht %>
+  <%= @worker.jobtitle %>
 </p>
 
 <p>
@@ -29,7 +29,7 @@
 
 <p>
   <strong>Lisainfo:</strong>
-  <%= @worker.lisainfo %>
+  <%= @worker.info %>
 </p>
 
 <%= link_to 'Muuda', edit_admin_worker_path(@worker) %> |
