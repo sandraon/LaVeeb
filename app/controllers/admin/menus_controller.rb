@@ -70,6 +70,6 @@ class Admin::MenusController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def menu_params
-      params.require(:menu).permit(:toidukord1, :kirjeldus1, :toidukord2, :kirjeldus2, :toidukord3, :kirjeldus3, :toidukord4, :kirjeldus4, :toidukord5, :kirjeldus5, :lisainfo, :weekday)
+      params.require(:menu).permit(:meal1, :description1, :meal2, :description2, :meal3, :description3, :meal4, :description4, :meal5, :description5, :info, :weekday)
     end
 end

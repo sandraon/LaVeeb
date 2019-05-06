@@ -70,6 +70,6 @@ class Admin::WorkersController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def worker_params
-      params.require(:worker).permit(:nimi, :ametikoht, :epost, :number, :lisainfo, :foto, :remove_foto)
+      params.require(:worker).permit(:name, :jobtitle, :epost, :number, :info, :foto, :remove_foto)
     end
 end
