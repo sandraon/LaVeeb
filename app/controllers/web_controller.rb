@@ -19,4 +19,10 @@ class WebController < ApplicationController
     @homepages = Homepage.all
     @menus = Menu.all
   end
+
+  def news
+    @homepages = Homepage.all
+    @news = News.all
+    @news = News.order(created_at: :desc).limit(5)
+  end
 end

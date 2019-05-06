@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'töötajad', to: 'web#worker'
   get 'rühmad', to: 'web#group'
   get 'nädalamenüü', to: 'web#foodmenu'
+  get 'teated', to: 'web#news'
   
   devise_for :users
 
