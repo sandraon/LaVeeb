@@ -12,8 +12,12 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'login', to: 'login#login', as: 'login'
   get 'admin/index'
+
+  # Subpages
   get 'töötajad', to: 'web#worker'
   get 'rühmad', to: 'web#group'
+  get 'nädalamenüü', to: 'web#foodmenu'
+  
   devise_for :users
 
   root to: 'web#home'

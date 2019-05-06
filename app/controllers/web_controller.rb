@@ -14,4 +14,9 @@ class WebController < ApplicationController
     @homepages = Homepage.all
     @groups = Group.all
   end
+
+  def foodmenu
+    @homepages = Homepage.all
+    @menus = Menu.all
+  end
 end

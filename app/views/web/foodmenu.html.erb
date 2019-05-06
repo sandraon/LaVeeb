@@ -1,0 +1,18 @@
+<h4>Nädalamenüü</h4>
+<div class="row">
+    <% @menus.each do |menu| %>
+        <div class="foodmenu col-sm-4">
+            <div class="media-body">
+                <h5><%= menu.weekday %></h5><br>
+                <p><span><%= menu.meal1 %></span> <%= menu.description1 %></p>
+                <p><span><%= menu.meal2 %></span> <%= menu.description2 %></p>
+                <p><span><%= menu.meal3 %></span> <%= menu.description3 %></p>
+                <p><span><%= menu.meal4 %></span> <%= menu.description4 %></p>
+                <p><span><%= menu.meal5 %></span> <%= menu.description5 %></p>
+            </div>
+        </div>
+    <% end %>
+        
+    
+    </div>
+</div>
