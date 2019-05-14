@@ -1,6 +1,7 @@
 class LoginController < ApplicationController
-    def login
-      render template: "login/login"
-    end
+  layout 'login'
+
+  def login
+  end
 
 end

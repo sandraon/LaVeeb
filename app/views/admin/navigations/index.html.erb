@@ -16,9 +16,9 @@
       <tr>
         <td><%= admin_navigation.name %></td>
         <td><%= admin_navigation.path %></td>
-        <td><%= link_to 'Show', admin_navigation %></td>
+        <td><%= link_to 'Show', admin_navigations_path(admin_navigation) %></td>
         <td><%= link_to 'Edit', edit_admin_navigation_path(admin_navigation) %></td>
-        <td><%= link_to 'Destroy', admin_navigation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', admin_navigations_path(admin_navigation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

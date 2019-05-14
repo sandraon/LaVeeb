@@ -4,8 +4,7 @@ class HomepagesController < ApplicationController
   # GET /homepages
   # GET /homepages.json
   def index
-    @homepages = Homepage.all
-  end
+end
 
   # GET /homepages/1
   # GET /homepages/1.json

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    resources :navigations
-  end
-  namespace :admin do
+    root to: 'admin#index'
+    #get 'admin/index'
+
     resources :navigations
     resources :pages
     resources :news
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   
   get 'home/index'
   get 'login', to: 'login#login', as: 'login'
-  get 'admin/index'
+  
 
   # Subpages
   get 'töötajad', to: 'web#worker'
@@ -23,6 +23,9 @@ Rails.application.routes.draw do
   get 'nädalamenüü', to: 'web#foodmenu'
   get 'teated', to: 'web#news'
   get 'alamleht', to: 'web#subpage'
+
+
+  resources :pages, only: ['show']
   
   devise_for :users
 

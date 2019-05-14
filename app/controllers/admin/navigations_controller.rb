@@ -4,7 +4,7 @@ class Admin::NavigationsController < Admin::ApplicationController
   # GET /admin/navigations
   # GET /admin/navigations.json
   def index
-    @admin_navigations = Admin::Navigation.all
+    @admin_navigations = Navigation.all
   end
 
   # GET /admin/navigations/1
@@ -14,7 +14,7 @@ class Admin::NavigationsController < Admin::ApplicationController
 
   # GET /admin/navigations/new
   def new
-    @admin_navigation = Admin::Navigation.new
+    @admin_navigation = Navigation.new
   end
 
   # GET /admin/navigations/1/edit
@@ -24,11 +24,11 @@ class Admin::NavigationsController < Admin::ApplicationController
   # POST /admin/navigations
   # POST /admin/navigations.json
   def create
-    @admin_navigation = Admin::Navigation.new(admin_navigation_params)
+    @admin_navigation = Navigation.new(admin_navigation_params)
 
     respond_to do |format|
       if @admin_navigation.save
-        format.html { redirect_to @admin_navigation, notice: 'Navigation was successfully created.' }
+        format.html { redirect_to admin_navigations_path(@admin_navigation), notice: 'Navigation was successfully created.' }
         format.json { render :show, status: :created, location: @admin_navigation }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::NavigationsController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @admin_navigation.update(admin_navigation_params)
-        format.html { redirect_to @admin_navigation, notice: 'Navigation was successfully updated.' }
+        format.html { redirect_to admin_navigations_path(@admin_navigation), notice: 'Navigation was successfully updated.' }
         format.json { render :show, status: :ok, location: @admin_navigation }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Admin::NavigationsController < Admin::ApplicationController
   def destroy
     @admin_navigation.destroy
     respond_to do |format|
-      format.html { redirect_to admin_navigations_url, notice: 'Navigation was successfully destroyed.' }
+      format.html { redirect_to admin_navigations_path, notice: 'Navigation was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,11 +64,11 @@ class Admin::NavigationsController < Admin::ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_navigation
-      @admin_navigation = Admin::Navigation.find(params[:id])
+      @admin_navigation = Navigation.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_navigation_params
-      params.require(:admin_navigation).permit(:name, :path)
+      params.require(:navigation).permit(:name, :path)
     end
 end

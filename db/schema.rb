@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_05_14_074730) do
 
-  create_table "admin_navigations", force: :cascade do |t|
-    t.string "name"
-    t.string "path"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.integer "number"
@@ -70,17 +63,9 @@ ActiveRecord::Schema.define(version: 2019_05_14_074730) do
 
   create_table "navigations", force: :cascade do |t|
     t.string "name"
-    t.string "url"
-    t.integer "parent_id"
-    t.integer "lft", null: false
-    t.integer "rgt", null: false
-    t.integer "depth", default: 0, null: false
-    t.integer "children_count", default: 0, null: false
+    t.string "path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lft"], name: "index_navigations_on_lft"
-    t.index ["parent_id"], name: "index_navigations_on_parent_id"
-    t.index ["rgt"], name: "index_navigations_on_rgt"
   end
 
   create_table "news", force: :cascade do |t|

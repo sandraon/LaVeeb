@@ -1,0 +1,6 @@
+<% @navigation.each do |nav| %>
+  <li class="nav-item">
+  <%= link_to(nav.name, nav.path, class:'nav-link') %>
+    
+  </li>
+<% end %>

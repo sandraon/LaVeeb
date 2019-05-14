@@ -1,4 +1,4 @@
-class AdminController < ApplicationController
+class Admin::AdminController < Admin::ApplicationController
   def login
     render template: "login/login"
   end

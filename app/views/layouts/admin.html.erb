@@ -22,7 +22,7 @@
     <div class="border-right" id="sidebar-wrapper">
       <div class="list-group list-group-flush">
         <%= image_tag("LaVeeb-logo.png", alt: "Laveeb logo", :class => "list-group-item admin-logo") %>
-        <a href="/admin/index" class="list-group-item list-group-item-action">TÖÖLAUD</a>
+        <%= link_to('TÖÖLAUD', admin_root_path, class: 'list-group-item list-group-item-action') %>
         <a href="/admin/homepages" class="list-group-item list-group-item-action">AVALEHT</a>
         <a href="/admin/pages" class="list-group-item list-group-item-action">LEHED</a>
         <%= link_to('NAVIGEERIMINE', admin_navigations_path, class: 'list-group-item list-group-item-action') %>
