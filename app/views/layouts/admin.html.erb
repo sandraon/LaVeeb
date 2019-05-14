@@ -25,7 +25,7 @@
         <a href="/admin/index" class="list-group-item list-group-item-action">TÖÖLAUD</a>
         <a href="/admin/homepages" class="list-group-item list-group-item-action">AVALEHT</a>
         <a href="/admin/pages" class="list-group-item list-group-item-action">LEHED</a>
-        <a href="#" class="list-group-item list-group-item-action">NAVIGEERIMINE</a>
+        <%= link_to('NAVIGEERIMINE', admin_navigations_path, class: 'list-group-item list-group-item-action') %>
         <li class="list-group-item modules">MOODULID</li>
         <a href="/admin/workers" class="list-group-item list-group-item-action"><i class="material-icons">people</i>Töötajad</a>
         <a href="/admin/groups" class="list-group-item list-group-item-action"><i class="material-icons">group_work</i>Rühmad</a>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Navigations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Path</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_navigations.each do |admin_navigation| %>
+      <tr>
+        <td><%= admin_navigation.name %></td>
+        <td><%= admin_navigation.path %></td>
+        <td><%= link_to 'Show', admin_navigation %></td>
+        <td><%= link_to 'Edit', edit_admin_navigation_path(admin_navigation) %></td>
+        <td><%= link_to 'Destroy', admin_navigation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Navigation', new_admin_navigation_path %>

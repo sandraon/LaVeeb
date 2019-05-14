@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+    resources :navigations
+  end
+  namespace :admin do
+    resources :navigations
     resources :pages
     resources :news
     resources :menus
