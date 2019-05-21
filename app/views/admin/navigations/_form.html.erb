@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :path %>
-    <%= form.text_field :path %>
+    <%= form.select :path, options_for_select(admin_navigation.available_paths.map { |p| [p[:name], p[:path]] }) %>
   </div>
 
   <div class="actions">
