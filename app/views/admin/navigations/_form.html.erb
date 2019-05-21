@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field form-group">
+    <%= form.label :name, 'Lehe nimi menüüs' %>
+    <span id="menu-element">(maksimaalselt kahesõnaline)</span>
+    <%= form.text_field :name, :class => 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :path %>
-    <%= form.select :path, options_for_select(admin_navigation.available_paths.map { |p| [p[:name], p[:path]] }) %>
+  <div class="field form-group">
+    <%= form.label :path, 'Sisuleht' %>
+    <%= form.select :path, options_for_select(admin_navigation.available_paths.map { |p| [p[:name], p[:path]] }), {}, {required: 'true', autofocus: 'true', :class => 'form-control'} %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Salvesta', :class => 'btn btn-save' %>
   </div>
 <% end %>

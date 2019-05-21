@@ -1,6 +1,9 @@
-<h1>Editing Admin Navigation</h1>
+<div class="page-title">
+  <p>NAVIGEERIMINE</p>
+</div>
+<h4>Muuda menüü elementi</h4>
 
+<br>
 <%= render 'form', admin_navigation: @admin_navigation %>
 
-<%= link_to 'Show', admin_navigation_path(@admin_navigation) %> |
-<%= link_to 'Back', admin_navigations_path %>
+<%= link_to 'Loobu', admin_navigations_path, :class => 'btn btn-cancel' %>

@@ -5,8 +5,10 @@ class Navigation < ApplicationRecord
   
   def static_paths
     [
-      {name: 'example', path: 'example'},
-      {name: 'test', path: 'test'}
+      {name: 'Töötajad', path: '/töötajad'},
+      {name: 'Rühmad', path: '/rühmad'},
+      {name: 'Teated', path: '/teated'},
+      {name: 'Nädalamenüü', path: '/nädalamenüü'}
     ]
   end
 

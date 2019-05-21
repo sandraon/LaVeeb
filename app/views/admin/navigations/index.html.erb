@@ -1,29 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Admin Navigations</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Path</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="page-title">
+  <p>NAVIGEERIMINE</p>
+</div>
+<%= link_to 'Lisa uus leht menüüsse', new_admin_navigation_path, :class => 'btn btn-add' %><br><br>
+<h4>Menüüsse lisatud lehed</h4>
+<br/>
+<div class="kirjed">
     <% @admin_navigations.each do |admin_navigation| %>
-      <tr>
-        <td><%= admin_navigation.name %></td>
-        <td><%= admin_navigation.path %></td>
-        <td><%= link_to 'Show', admin_navigations_path(admin_navigation) %></td>
-        <td><%= link_to 'Edit', edit_admin_navigation_path(admin_navigation) %></td>
-        <td><%= link_to 'Destroy', admin_navigations_path(admin_navigation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <ul class="list-group list-group-horizontal">
+        <li><%= admin_navigation.name %></li>
+        <li><%= link_to 'Muuda', edit_admin_navigation_path(admin_navigation) %></li>
+        <li><%= link_to 'Kustuta', admin_navigation_path(admin_navigation), method: :delete, data: { confirm: 'Kas sa oled kindel, et soovid elemendi menüüst kustutada?' } %></li>
+      </ul>
+      
     <% end %>
-  </tbody>
-</table>
+</div>
 
 <br>
-
-<%= link_to 'New Admin Navigation', new_admin_navigation_path %>
