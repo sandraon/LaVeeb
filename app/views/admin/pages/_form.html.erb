@@ -16,6 +16,16 @@
     <%= form.text_field :heading, :class => 'form-control' %>
   </div>
 
+  <div class="field form-group">
+    <%= form.label :slug, 'URL' %>
+     <div class="input-group mb-2">
+     <div class="input-group-prepend">
+          <div class="input-group-text"><%= root_url %></div>
+      </div>
+      <%= form.text_field :slug, :class => 'form-control' %>
+    </div>
+  </div>
+
   <div class="field">
     <%= form.label :content, 'Lehe sisu' %>
     <%= form.text_area :content, :class => 'form-control', :id => 'summernote-page' %>

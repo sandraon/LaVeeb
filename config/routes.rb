@@ -25,10 +25,14 @@ Rails.application.routes.draw do
   get 'alamleht', to: 'web#subpage'
 
 
-  resources :pages, only: ['show']
+  #resources :pages, only: ['show']
   
   devise_for :users
 
   root to: 'web#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  #this has to be last line
+  get '/:slug', to: 'pages#show'
+
 end

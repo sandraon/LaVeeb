@@ -70,6 +70,6 @@ class Admin::PagesController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:heading, :content)
+      params.require(:page).permit(:heading, :content, :slug)
     end
 end
