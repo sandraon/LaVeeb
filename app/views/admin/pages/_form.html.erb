@@ -1,7 +1,7 @@
 <%= form_with(model: [:admin, @page], local: true) do |form| %>
   <% if page.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(page.errors.count, "error") %> prohibited this page from being saved:</h2>
+    <div class="error_explanation">
+    <h4><%= "Andmeid ei salvestatud järgmistel põhjustel:" %></h4>
 
       <ul>
       <% page.errors.full_messages.each do |message| %>
@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field form-group">
-    <%= form.label :heading, 'Pealkiri' %>
+    <%= form.label :heading, 'Pealkiri *' %>
     <%= form.text_field :heading, :class => 'form-control' %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :slug, 'URL' %>
+    <%= form.label :slug, 'URL *' %>
      <div class="input-group mb-2">
      <div class="input-group-prepend">
           <div class="input-group-text"><%= root_url %></div>
@@ -27,11 +27,11 @@
   </div>
 
   <div class="field">
-    <%= form.label :content, 'Lehe sisu' %>
+    <%= form.label :content, 'Lehe sisu *' %>
     <%= form.text_area :content, :class => 'form-control', :id => 'summernote-page' %>
     <script>
       $('#summernote-page').summernote({
-        placeholder: 'Lisada võib teksti, pilti, videot, linke jne',
+        placeholder: 'Lisada võib teksti, pilti, videot, linke ja muud',
         tabsize: 2,
         height: 500
       });

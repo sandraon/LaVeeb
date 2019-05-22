@@ -1,7 +1,7 @@
 <%= form_with(model: [:admin, @news], local: true) do |form| %>
   <% if @news.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
+    <div class="error_explanation">
+    <h4><%= "Andmeid ei salvestatud järgmistel põhjustel:" %></h4>
 
       <ul>
       <% news.errors.full_messages.each do |message| %>
@@ -12,12 +12,12 @@
   <% end %>
   <div>
       <div class="field form-group">
-          <%= form.label :heading, 'Pealkiri' %>
+          <%= form.label :heading, 'Pealkiri *' %>
           <%= form.text_field :heading, :class => 'form-control' %>
         </div>
       
         <div class="field form-group">
-          <%= form.label :content, 'Sisu' %>
+          <%= form.label :content, 'Sisu *' %>
           <%= form.text_area :content, :class => 'form-control', :id => 'summernote' %>
           <script>
             $('#summernote').summernote({

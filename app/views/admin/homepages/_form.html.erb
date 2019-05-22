@@ -1,7 +1,7 @@
 <%= form_with(model: [:admin, @homepage], local: true) do |form| %>
   <% if homepage.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(homepage.errors.count, "error") %> prohibited this homepage from being saved:</h2>
+    <div class="error_explanation">
+    <h4><%= "Andmeid ei salvestatud järgmistel põhjustel:" %></h4>
 
       <ul>
       <% homepage.errors.full_messages.each do |message| %>
@@ -14,7 +14,7 @@
     <div class="col-sm-6">
       <h5>Asutuse info</h5>
       <div class="field form-group">
-        <%= form.label :orgname, 'Asutuse nimi' %>
+        <%= form.label :orgname, 'Asutuse nimi *' %>
         <%= form.text_field :orgname, :class => 'form-control' %>
       </div>
 
@@ -59,22 +59,12 @@
         <%= form.label :pictext, 'Tekst fotole' %>
         <%= form.text_field :pictext, :class => 'form-control' %>
       </div>
-    
-      <div class="field form-group">
-        <%= form.label :linktekst, 'Nupu tekst' %>
-        <%= form.text_field :linktekst, :class => 'form-control' %>
-      </div>
-    
-      <div class="field form-group">
-        <%= form.label :linkdest, 'Nupu sihtkoht' %>
-        <%= form.text_field :linkdest, :class => 'form-control' %>
-      </div>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
         <div class="field form-group">
-          <%= form.label :content, 'Sisuosa avalehele', :class => 'h5' %>
+          <%= form.label :content, 'Sisuosa avalehele *', :class => 'h5' %>
           <%= form.text_area :content, :class => 'form-control', :id => 'summernote-homepage' %>
           <script>
             $('#summernote-homepage').summernote({
@@ -89,23 +79,23 @@
   <div class="row">
     <div class="col-sm-6">
       <div class="field form-group">
-        <%= form.label :address1, 'Aadress' %>
+        <%= form.label :address1, 'Aadress *' %>
         <%= form.text_field :address1, :class => 'form-control' %>
       </div>
     
       <div class="field form-group">
-        <%= form.label :address2, 'Postiindeks ja linn' %>
+        <%= form.label :address2, 'Postiindeks ja linn *' %>
         <%= form.text_field :address2, :class => 'form-control' %>
       </div>
     </div>
     <div class="col-sm-6">
       <div class="field form-group">
-        <%= form.label :epost, 'E-posti aadress' %>
+        <%= form.label :epost, 'E-posti aadress *' %>
         <%= form.text_field :epost, :class => 'form-control' %>
       </div>
     
       <div class="field form-group">
-        <%= form.label :phone, 'Telefoninumber' %>
+        <%= form.label :phone, 'Telefoninumber *' %>
         <%= form.text_field :phone, :class => 'form-control' %>
       </div>
     </div>

@@ -1,4 +1,5 @@
 class Navigation < ApplicationRecord
+  validates :name, presence: true
   def available_paths
     static_paths + available_pages
   end

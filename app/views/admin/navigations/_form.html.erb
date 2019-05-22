@@ -1,7 +1,7 @@
 <%= form_with(model: admin_navigation, local: true, url: admin_navigations_path) do |form| %>
   <% if admin_navigation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(admin_navigation.errors.count, "error") %> prohibited this admin_navigation from being saved:</h2>
+    <div class="error_explanation">
+      <h4><%= "Andmeid ei salvestatud järgmistel põhjustel:" %></h4>
 
       <ul>
       <% admin_navigation.errors.full_messages.each do |message| %>
@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field form-group">
-    <%= form.label :name, 'Lehe nimi menüüs' %>
+    <%= form.label :name, 'Lehe nimi menüüs *' %>
     <span id="menu-element">(maksimaalselt kahesõnaline)</span>
     <%= form.text_field :name, :class => 'form-control' %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :path, 'Sisuleht' %>
+    <%= form.label :path, 'Sisuleht *' %>
     <%= form.select :path, options_for_select(admin_navigation.available_paths.map { |p| [p[:name], p[:path]] }), {}, {required: 'true', autofocus: 'true', :class => 'form-control'} %>
   </div>
 

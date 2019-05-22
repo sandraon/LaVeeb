@@ -28,7 +28,7 @@ class Admin::NavigationsController < Admin::ApplicationController
 
     respond_to do |format|
       if @admin_navigation.save
-        format.html { redirect_to admin_navigations_path(@admin_navigation), notice: 'Navigation was successfully created.' }
+        format.html { redirect_to admin_navigations_path, notice: 'Leht lisati edukalt menüüsse.' }
         format.json { render :show, status: :created, location: @admin_navigation }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::NavigationsController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @admin_navigation.update(admin_navigation_params)
-        format.html { redirect_to admin_navigations_path(@admin_navigation), notice: 'Navigation was successfully updated.' }
+        format.html { redirect_to admin_navigations_path(@admin_navigation), notice: 'Lehe info on muudetud.' }
         format.json { render :show, status: :ok, location: @admin_navigation }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Admin::NavigationsController < Admin::ApplicationController
   def destroy
     @admin_navigation.destroy
     respond_to do |format|
-      format.html { redirect_to admin_navigations_path, notice: 'Navigation was successfully destroyed.' }
+      format.html { redirect_to admin_navigations_path, notice: 'Leht on menüüst kustutatud.' }
       format.json { head :no_content }
     end
   end

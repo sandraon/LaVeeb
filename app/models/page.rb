@@ -1,4 +1,4 @@
 class Page < ApplicationRecord
   validates_uniqueness_of :slug
-  validates :slug, presence: true
+  validates :heading, :slug, :content, presence: true
 end

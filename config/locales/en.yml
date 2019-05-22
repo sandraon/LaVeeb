@@ -30,4 +30,60 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        worker:
+          attributes:
+            name:
+              blank: 'Nime väli ei tohi olla tühi'
+            jobtitle:
+              blank: 'Ametikoha väli ei tohi olla tühi'
+        page:
+          attributes:
+            heading:
+              blank: 'Pealkirja väli ei tohi olla tühi'
+            slug:
+              blank: 'URL väli ei tohi olla tühi'
+            content:
+              blank: 'Sisuosa ei tohi olla tühi'
+        news:
+          attributes:
+            heading:
+              blank: 'Pealkirja väli ei tohi olla tühi'
+            content:
+              blank: 'Sisuosa ei tohi olla tühi'
+        navigation:
+          attributes:
+            name:
+              blank: 'Lehe nime väli ei tohi olla tühi'
+            path:
+              blank: 'Sisulehe väli ei tohi olla tühi'
+        homepage:
+          attributes:
+            orgname:
+              blank: 'Asutuse nime väli ei tohi olla tühi'
+            content:
+              blank: 'Sisuosa väli ei tohi olla tühi'
+            address1:
+              blank: 'Aadressi väli ei tohi olla tühi'
+            address2:
+              blank: 'Postiindeksi ja linna väli ei tohi olla tühi'
+            epost:
+              blank: 'E-posti aadressi väli ei tohi olla tühi'
+            phone:
+              blank: 'Telefoninumbri väli ei tohi olla tühi'
+        group:
+          attributes:
+            name:
+              blank: 'Nime väli ei tohi olla tühi'
+            number:
+              blank: 'Laste arvu väli ei tohi olla tühi'
+            age:
+              blank: 'Laste vanuse väli ei tohi olla tühi'
+            description:
+              blank: 'Kirjelduse väli ei tohi olla tühi'
+            teacher:
+              blank: 'Rühmaõpetaja nime väli ei tohi olla tühi'
+  errors:
+      format: "%{message}"
