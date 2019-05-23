@@ -23,7 +23,7 @@ set :deploy_to, "/var/www/laveeb"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "var/www/laveeb/shared/db/production.sqlite3"
+append :linked_files, "db/production.sqlite3"
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
