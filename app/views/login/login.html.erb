@@ -15,14 +15,14 @@
                 <div class="col-sm-2"></div>
                 <%= form_for(:user, :url => session_path(:user)) do |f| %>
                 <div class="field form-group row">
-                    <%= f.label :email, 'E-posti aadress', :class => "col-sm-6 col-form-control" %>
+                    <%= f.label :email, 'E-posti aadress *', :class => "col-sm-6 col-form-control" %>
                     <div class="col-sm-6 field">
                         <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control" %>
                     </div>
                 </div>
         
                 <div class="field form-group row">
-                    <%= f.label :password, 'Parool', :class => "col-sm-6 col-form-control" %>
+                    <%= f.label :password, 'Parool *', :class => "col-sm-6 col-form-control" %>
                     <div class="col-sm-6 field">
                         <%= f.password_field :password, autocomplete: "current-password", :class => "form-control" %>
                     </div>
@@ -32,9 +32,7 @@
                 <div class="actions">
                     <%= f.submit "Logi sisse", :class => 'btn btn-add' %>
                 </div>
-                <% end %>
-        
-                
+                <% end %>                
             </div>
         </div>
     </div>
