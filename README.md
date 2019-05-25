@@ -14,7 +14,7 @@ Gems:
 * [Summernote](https://github.com/summernote/summernote-rails) - Version 0.8.10.0
 * [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) - Version 1.3.1
 * [MiniMagick](https://github.com/minimagick/minimagick) - Version 4.9.3
-* [Capistrano] (https://github.com/capistrano/capistrano) - Version 3.11.0
+* [Capistrano](https://github.com/capistrano/capistrano) - Version 3.11.0
 
 ## Versioning
 
