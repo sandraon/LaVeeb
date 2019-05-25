@@ -1,4 +1,4 @@
-<%= form_with(model: admin_navigation, local: true, url: admin_navigations_path) do |form| %>
+<%= form_with(model: [:admin, @admin_navigation], local: true) do |form| %>
   <% if admin_navigation.errors.any? %>
     <div class="error_explanation">
       <h4><%= "Andmeid ei salvestatud järgmistel põhjustel:" %></h4>

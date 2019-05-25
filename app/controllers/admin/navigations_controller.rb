@@ -42,7 +42,7 @@ class Admin::NavigationsController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @admin_navigation.update(admin_navigation_params)
-        format.html { redirect_to admin_navigations_path(@admin_navigation), notice: 'Lehe info on muudetud.' }
+        format.html { redirect_to admin_navigations_path, notice: 'Lehe info on muudetud.' }
         format.json { render :show, status: :ok, location: @admin_navigation }
       else
         format.html { render :edit }
